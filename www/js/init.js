@@ -157,7 +157,11 @@
 		$newWord.removeClass('is-hidden').addClass('is-visible');
 	}
 
-	$('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70});
+	$('.button-collapse').sideNav({
+		menuWidth: 240, // Default is 240
+		closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+	});
+
 	$('.parallax').parallax();
 
 	var card  = document.querySelectorAll('.card-work');
