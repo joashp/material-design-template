@@ -28,8 +28,8 @@
                 <div class="nav-wrapper">
                     <a href="#" id="logo-container" class="brand-logo">Group 9 Assignment 2</a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="#intro">Service</a></li>
-                        <li><a href="#work">Work</a></li>
+                        <li><a href="#intro"></a></li>
+                        <li><a href="#work"></a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <li><a href="https://github.com/amirlotfy/Group_8_assignment_2_CSS" target="_blank">Download</a></li>
@@ -51,7 +51,7 @@
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <h1 class="text_h center header cd-headline letters type">
-                <span>Group 8</span>
+                <span>Group 9</span>
                 <span class="cd-words-wrapper waiting">
                     <b class="is-visible">Electric Car Portfolio</b>
                 </span>
@@ -70,21 +70,21 @@
                 <div class="col s12 m4 l4">
                     <div class="center promo promo-example">
                         <i class="mdi-image-flash-on"></i>
-                        <h5 class="promo-caption">Speeds up development</h5>
+                        <h5 class="promo-caption">Quick</h5>
                         <p class="light center">Amir has dreams of being a DJ.</p>
                     </div>
                 </div>
                 <div class="col s12 m4 l4">
                     <div class="center promo promo-example">
                         <i class="mdi-social-group"></i>
-                        <h5 class="promo-caption">User Experience Focused</h5>
+                        <h5 class="promo-caption">Modern</h5>
                         <p class="light center">Udaya has dreams of being an artist.</p>
                     </div>
                 </div>
                 <div class="col s12 m4 l4">
                     <div class="center promo promo-example">
                         <i class="mdi-hardware-desktop-windows"></i>
-                        <h5 class="promo-caption">Fully responsive</h5>
+                        <h5 class="promo-caption">Responsive</h5>
                         <p class="light center">Joel has dreams of being a musician.</p>
                     </div>
                 </div>
@@ -144,55 +144,117 @@
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/project4.jpg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                            <p><a href="#">Project link</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                            <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/project5.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                            <p><a href="#">Project link</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                            <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4 l4">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/project6.jpeg">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Project Title <i class="mdi-navigation-more-vert right"></i></span>
-                            <p><a href="#">Project link</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Project Title <i class="mdi-navigation-close right"></i></span>
-                            <p>Here is some more information about this project that is only revealed once clicked on.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+    <!--js.chart-->
+<html>
+<head>
+<style>
+.center {
+  text-align: center;
 
+}
+</style>
+</head>
+<body>
+
+<div class="center">
+  <h3>Hover To See Values</h3>
+
+</div>
+
+</body>
+</html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+
+    <title>Document</title>
+
+
+    <div style="">
+        <
+    <canvas id="myChart2"></canvas>
+    </div>
+    <div style="">
+    <canvas id="myChart" ></canvas>
+    </div>
+
+
+
+
+
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Aspark Owl", "Audi E6 e-tron", "Audi Q4 e-tron"];
+var yValues = [280, 400, 250];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Mileage Per Charge"
+    }
+  }
+});
+
+</script>
+
+</body>
+</html>
+
+    <html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+<canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Aspark Owl", "Audi E6 e-tron", "Audi Q4 e-tron"];
+var yValues = [2012, 469, 210, 24, 15];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart2", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Horsepower Per Vehicle"
+    }
+  }
+});
+
+</script>
+
+</body>
+</html>
     <!--Parallax-->
     <div class="parallax-container">
         <div class="parallax"><img src="img/parallax1.png"></div>
@@ -323,6 +385,11 @@
     <!--  Scripts-->
     <script src="min/plugin-min.js"></script>
     <script src="min/custom-min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
 
 </body>
 </html>
+
+
