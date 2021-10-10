@@ -37,3 +37,8 @@ Working with CRON:
 
 Script with -git pull- command is in the repository's root folder. Command date added to script just for a better logging
 
+Pushing changes to remote:
+
+git add /www/index.html
+git commit -m 'changed main title in index.html'
+git push origin master
