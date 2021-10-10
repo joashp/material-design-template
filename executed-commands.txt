@@ -1,0 +1,39 @@
+Updating apt-get:
+
+sudo apt-get update
+sudo apt-get upgrade
+
+Installing git and nginx: 
+
+sudo apt-get install -y git nginx 
+
+Checking nginx status: 
+
+systemctl status nginx
+
+Creating and reading SSH key for accesing GitHub without entering password:
+
+ssh-keygen
+cat /home/vhorbach/.ssh/id-rsa.pub
+
+Configuring git and cloning previously forked (from GitHub WebUI) repository:
+
+git config --global user.name Vasyl Horbachuk
+git config --global user.email vasylh@playtika.com
+git clone git@github.com:v-horbachuk/material-design-template.git
+
+Working with CRON:
+
+	 -editing crontab:
+
+		 crontab -e
+
+	 crontab job:
+
+		* * * * * /home/vhorbach/material-design-template/pulling_from_git_cron.sh >> /home/vhorbach/cron.log 1>&1
+
+	 -deleting crontab job after using GitHub Webhook:
+		crontab -r
+
+Script with -git pull- command is in the repository's root folder. Command date added to script just for a better logging
+
