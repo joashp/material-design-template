@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if git diff --cached | grep --with-filename -n "shit"
+then
+        echo "Shit found"
+        exit 1
+else
+        echo "Shit not found"
+        exit 0
+fi
+
