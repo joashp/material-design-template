@@ -40,3 +40,4 @@ Site after updating "index.html" and pushin it to GitHub:
 Git Log after pushing chages to remote:
 
 <img width="854" alt="Screenshot 2021-10-10 at 18 18 26" src="https://user-images.githubusercontent.com/26361903/136702127-d87907ac-ca4c-4198-b98a-86e6dd4ca854.png">
+
