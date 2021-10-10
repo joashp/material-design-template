@@ -10,7 +10,7 @@
 ---
 
 ## **Install Nginx web server and git**
-To install nginx, run the following commands:
+To install Nginx, run the following commands:
 
 ```bash
 sudo apt-get update
