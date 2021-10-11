@@ -86,5 +86,3 @@ git rebase -i HEAD~5
 Git Log after squashing:
 
 <img width="747" alt="Screenshot 2021-10-10 at 22 55 34" src="https://user-images.githubusercontent.com/26361903/136711465-7001b655-dab3-408f-a579-e5fde6999ca3.png">
-
-
