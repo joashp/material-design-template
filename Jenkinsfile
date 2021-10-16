@@ -26,7 +26,7 @@ pipeline{
         }
         stage ('Final') {
             steps {
-                sh "echo "
+                sh "echo  Final build"
             }
         }
     }
