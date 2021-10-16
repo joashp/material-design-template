@@ -26,9 +26,9 @@ pipeline{
         }
         stage ('Archive') {
             steps {
-                sh "mkdir artifacts"
-                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=artiacts -zcvf artifacts/artifacts.tar.gz ."
-                archiveArtifacts artifacts: "artifacts/artifacts.tar.gz"
+                sh "mkdir artfct"
+                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=artfct -zcvf artfct/artifacts.tar.gz ."
+                archiveArtifacts artifacts: "artfct/artifacts.tar.gz"
             }
         }
     }
