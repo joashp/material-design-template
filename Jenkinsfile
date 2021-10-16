@@ -28,7 +28,7 @@ pipeline{
             steps {
                 sh "mkdir artfcts"
                 sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=artfcts -zcvf artfcts/artifacts.tar.gz ."
-                archiveArtifacts artifacts: 'artfcts/artifacts.tzr.gz', fingerprint: true, onlyIfSuccessful: true
+                archiveArtifacts artifacts: 'artfcts/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
                 sh "rm -r artfcts"
             }
         }
