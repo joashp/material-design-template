@@ -27,8 +27,8 @@ pipeline{
         stage ('tar') {
             steps {
                 sh "mkdir archive"
-                sh "tar --exclude='www/css' '--exclude='www/js' '--exclude=.git' zcvf archive/artifacts.tar.gz"
-                archiveArtifacts artifacts: 'archive/artifacts.tar.gz'
+                sh "tar --exclude=www/css --exclude=www/js --exclude=.git zcvf archive/artifacts.tar.gz"
+                archiveArtifacts artifacts: "archive/artifacts.tar.gz"
             }
         }
     }
