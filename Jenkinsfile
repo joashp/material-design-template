@@ -11,14 +11,14 @@ pipeline{
                 stage('CleanCSS') {
                     steps {
                         nodejs(nodeJSInstallationName: 'nodejs') {
-                            sh "cleancss -o www/min/*.css www/css/*.css"
+                            sh "cleancss -o www/min/artifact.css www/css/*.css"
                         }
                     }
                 }
                 stage ('UglifyJS') {
                     steps {
                         nodejs(nodeJSInstallationName: 'nodejs') {
-                            sh "uglifyjs -o www/min/*.js www/js/*.js"
+                            sh "uglifyjs -o www/min/artifact.js www/js/*.js"
                         }
                     }
                 }
