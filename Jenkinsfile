@@ -1,9 +1,9 @@
 pipeline{
     agent {
-        label 'jenkins-agent'
+        label 'jenkins-agent' //define jenkins agent
     }
     tools {
-        nodejs 'nodejs'
+        nodejs 'nodejs' //define NPM tools
     }
     stages {
         stage ('Compressing') {
@@ -11,7 +11,7 @@ pipeline{
                 stage('CleanCSS') {
                     steps {
                         nodejs(nodeJSInstallationName: 'nodejs') {
-                            sh "cleancss -o www/min/*.scc www/css/*.css"
+                            sh "cleancss -o www/min/*.css www/css/*.css"
                         }
                     }
                 }
@@ -22,6 +22,11 @@ pipeline{
                         }
                     }
                 }
+            }
+        }
+        stage ('Final') {
+            steps {
+                sh "echo "
             }
         }
     }
