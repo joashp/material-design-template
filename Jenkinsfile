@@ -11,25 +11,25 @@ pipeline{
                 stage('CleanCSS') {
                     steps {
                         nodejs(nodeJSInstallationName: 'nodejs') {
-                            sh "cleancss -o www/min/artifact.css www/css/*.css"
+                            sh "cleancss -o www/min/*.css www/css/*.css"
                         }
                     }
                 }
                 stage ('UglifyJS') {
                     steps {
                         nodejs(nodeJSInstallationName: 'nodejs') {
-                            sh "uglifyjs -o www/min/artifact.js www/js/*.js"
+                            sh "uglifyjs -o www/min/*.js www/js/*.js"
                         }
                     }
                 }
             }
         }
-        stage ('Final') {
+        stage ('tar') {
             steps {
-                sh "echo  Final build"
+                sh "mkdir archive && tar --exclude='www/css' '--exclude='www/js' '--exclude=.git' zcvf archive/artifacts.tar.gz"
+                archiveArtifacts artifacts: 'archive/artifacts.tar.gz'
             }
         }
     }
 }
-//test
-//test2
+
