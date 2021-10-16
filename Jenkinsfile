@@ -24,13 +24,15 @@ pipeline{
                 }
             }
         }
-        stage ('Archive') {
+        stage ('Create and archive artifacts') {
             steps {
                 sh "mkdir artfct"
                 sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=artfct -zcvf artfct/artifacts.tar.gz ."
-                archiveArtifacts artifacts: "artfct/artifacts.tar.gz"
+                archiveArtifacts artifacts: 'artfct/artifacts.tzr.gz', fingerprint: true, onlyIfSuccessful: true
+                sh "rm -r artfct"
             }
         }
     }
 }
+
 
