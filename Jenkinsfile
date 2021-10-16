@@ -1,6 +1,6 @@
 pipeline{
     agent {
-        label 'agent-jenkins'
+        label 'jenkins-agent'
     }
     tools {
         nodejs 'nodejs'
