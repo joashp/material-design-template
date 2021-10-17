@@ -26,9 +26,9 @@ pipeline{
         }
         stage ('Create and archive artifacts') {
             steps {
-                sh "mkdir archive"
-                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=archive -zcvf archive/artifacts.tar.gz ."
-                archiveArtifacts artifacts: 'archive/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
+                sh "mkdir arch_artf"
+                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=arch_artf -zcvf arch_artf/artifacts.tar.gz ."
+                archiveArtifacts artifacts: 'arch_artf/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
 // transmit to post task                sh "rm -r archive"
             }
         }
