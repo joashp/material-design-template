@@ -4,7 +4,7 @@ node ('agent')
     {    
         env.NODEJS_HOME = tool 'nodejs16'
 		println(env.NODEJS_HOME)
-		sh 'ln -s /usr/bin/nodejs /usr/bin/node'
+		sh 'sudo ln -s /usr/bin/nodejs /usr/bin/node'
     }
     stage ('Checkout Repository')
     {
