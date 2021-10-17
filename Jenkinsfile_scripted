@@ -4,7 +4,7 @@ node ('agent')
     {    
         env.NODEJS_HOME = tool 'nodejs16'
 		println(env.NODEJS_HOME)
-	sh 'PATH=${PATH}:/usr/bin/env/nodejs
+	sh 'PATH=${PATH}:/usr/bin/env/nodejs'
     }
     stage ('Checkout Repository')
     {
