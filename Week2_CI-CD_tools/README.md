@@ -155,3 +155,50 @@ $sudo apt-get install git -y
 Manage Jenkins --> Global tool configuration --> add NodeJS installation(with name 'nodejs', ver '16.11.1', Global npm packages to install 'clean-css-cli uglify-js'
 
 ![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/nodejs_installation.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(*) **Spin up VM with installed Artifactory**
+
+- Update packages
+$sudo apt update -y
+
+- Importing the GPG key
+$wget -qO - https://releases.jfrog.io/artifactory/api/gpg/key/public | sudo apt-key add -
+
+- Add the JFrog Artifactory to Ubuntu 20.04.
+$echo "deb https://releases.jfrog.io/artifactory/artifactory-pro-debs focal main" | sudo tee -a /etc/apt/sources.list
+$echo "deb https://releases.jfrog.io/artifactory/artifactory-debs focal main" | sudo tee -a /etc/apt/sources.list
+
+- Update packages
+sudo apt update -y
+
+- Install JFrog Artifactory
+$sudo apt install jfrog-artifactory-oss -y
+
+- Start and enable artifactory
+$sudo systemctl start artifactory
+$sudo systemctl enable artifactory
+$sudo systemctl status artifactory
+
+![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_status.png)
+
+- Config artifactory
+
+![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_start.png)
+![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_url.png)
