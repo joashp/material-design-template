@@ -81,7 +81,7 @@ $sudo apt update -y && sudo apt upgrade -y
 - Install git                                      
 $sudo apt-get install git -y
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/git_version_main.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/git_version_main.png)
 
 
 
@@ -102,7 +102,7 @@ $sudo add-apt-repository ppa:openjdk-r/ppa -y
 - Install openjdk ver-8                       
 $sudo apt install openjdk-8-jdk -y
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/java_version_agent.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/java_version_agent.png)
 
 #####Install git#####
 
@@ -115,7 +115,7 @@ $sudo apt update -y && sudo apt upgrade -y
 - Install git                      
 $sudo apt-get install git -y
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/git_version_agent.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/git_version_agent.png)
 
 
 #####Connect agent to master node#####
@@ -123,25 +123,25 @@ $sudo apt-get install git -y
 - In main-node configure user 'jenkins' with sudo permissions. Add ssh key for user 'jenkins' 
 - In agent-jenkins node add user jenkins with sudo permissions. Copy ssh-key from main-node
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/add_ssh_key_from_main_node.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/add_ssh_key_from_main_node.png)
 
 
 - In main page Manage Jenkins --> Manage Nodes and Cloud --> New Node
 - Add node with nodename 'agent-jenkins'
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/agent_nodename.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/agent_nodename.png)
 
 - Configure agent setting.
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/agent_settings_new.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/agent_settings_new.png)
 
 - Add ssh-key 
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/ssh_creds_agent.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/ssh_creds_agent.png)
 
 - Jenkins agent is connected ti main node
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/list_of_nodes.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/list_of_nodes.png)
 
 
 
@@ -149,12 +149,12 @@ $sudo apt-get install git -y
 
 - Install NodeJS plugin 
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/node_plugin.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/node_plugin.png)
 
 - Add nodejs installation:
 Manage Jenkins --> Global tool configuration --> add NodeJS installation(with name 'nodejs', ver '16.11.1', Global npm packages to install 'clean-css-cli uglify-js'
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/nodejs_installation.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/nodejs_installation.png)
 
 
 
@@ -201,4 +201,5 @@ $sudo systemctl status artifactory
 - Config artifactory
 
 ![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_start.png)
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_url.pngartifactory_url.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_url.png)
+
