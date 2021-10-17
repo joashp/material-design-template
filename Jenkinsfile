@@ -25,14 +25,14 @@ pipeline
 				{
 					steps
 					{
-						sh 'uglifyjs ./www/js/init.js -c -o /www/min/compressed-js.js'
+						sh 'uglifyjs ./www/js/init.js -c -o ./www/min/compressed-js.js'
 					}
 				}
 				stage ('Compressing CSS')
                         	{
                                 	steps
                                 	{
-                                        	sh 'cleancss ./www/css/style.css -o /www/min/compressed-css.css'
+                                        	sh 'cleancss ./www/css/style.css -o ./www/min/compressed-css.css'
                                 	}
                         	}
 			}
