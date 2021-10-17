@@ -36,7 +36,7 @@ pipeline{
 			    withCredentials([usernamePassword(credentialsId: 'artifactory', usernameVariable: 'jenkins', passwordVariable: 'Q!w2e3r4T%')]) {
 			   	sh "curl -u${USERNAME}:${PASSWORD} -T arch_artf/artifacts.tar.gz \"http://artifactory.dvrt.xyz:8081/artifactory/assessment2/artifacts${env.BUILD_NUMBER}.tar.gz\""
 			    }
-			    //echo "Success"
+			    echo "Success"
     }
 }
 }
