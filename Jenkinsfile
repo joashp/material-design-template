@@ -26,9 +26,9 @@ pipeline{
         }
         stage ('Create and archive artifacts') {
             steps {
-                sh "mkdir artif_folder"
-                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=artif_folder -zcvf artif_folder/artifacts.tar.gz ."
-                archiveArtifacts artifacts: 'artif_folder/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
+                sh "mkdir artifacts_$BUILD_ID"
+                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=artifacts_$BUILD_ID -zcvf artifacts_$BUILD_ID/artifacts.tar.gz ."
+                archiveArtifacts artifacts: 'artifacts_$BUILD_ID/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
             }
         }
 //        stage ('Upload artifact to Artifactory') {
