@@ -2,8 +2,9 @@ node ('agent')
 {
     stage ('Build NodeJS')
     {    
-        def nodejs_home = tool 'nodejs16'
-	sh 'echo $nodejs_home'
+        env.NODEJS_HOME = tool 'nodejs16'
+	env.PATH = "env.NODEJS_HOME/bin:env.Path"
+	sh 'echo npm --version'
     }
     stage ('Checkout Repository')
     {
