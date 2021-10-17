@@ -111,7 +111,8 @@ _____________________________
 
     Jenkinsfile with all required steps is in the root directory of the repository.
     
-    
+    <img width="1098" alt="Screenshot 2021-10-17 at 20 24 11" src="https://user-images.githubusercontent.com/26361903/137638250-a7a2bba2-4f55-4c58-a99b-2e2c0ec51af7.png">
+
 ____________________________________
 
 
@@ -134,5 +135,12 @@ ____________________________________
    <img width="948" alt="Screenshot 2021-10-17 at 18 48 05" src="https://user-images.githubusercontent.com/26361903/137634855-eb8bc887-4a42-4ee2-95fb-1a3f6302090d.png">
 
 
+## 6. Use Scripted pipeline instead of declarative:
 
-   
+   **Scripted file is in root folder named "Jenkinsfile.scripted"
+
+   <img width="1225" alt="Screenshot 2021-10-17 at 20 22 54" src="https://user-images.githubusercontent.com/26361903/137638212-8f0179de-cfac-4687-81f1-a9db5ec6ad0e.png">
+
+## 7. Spin up VM with installed Artifactory:
+
+    
