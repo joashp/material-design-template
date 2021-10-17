@@ -145,7 +145,7 @@ $sudo apt-get install git -y
 
 
 
-**3  3.	Configure tools – NodeJS**
+**3.  Configure tools – NodeJS**
 
 - Install NodeJS plugin 
 
@@ -158,8 +158,10 @@ Manage Jenkins --> Global tool configuration --> add NodeJS installation(with na
 
 
 
+**4. Create “Multibranch Pipeline” pipeline job**
 
 
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/multibranch.png)
 
 
 
@@ -176,25 +178,25 @@ Manage Jenkins --> Global tool configuration --> add NodeJS installation(with na
 (*) **Spin up VM with installed Artifactory**
 
 - Update packages
-$sudo apt update -y
+$sudo apt update -y                                   
 
-- Importing the GPG key
+- Importing the GPG key                                    
 $wget -qO - https://releases.jfrog.io/artifactory/api/gpg/key/public | sudo apt-key add -
 
-- Add the JFrog Artifactory to Ubuntu 20.04.
-$echo "deb https://releases.jfrog.io/artifactory/artifactory-pro-debs focal main" | sudo tee -a /etc/apt/sources.list
+- Add the JFrog Artifactory to Ubuntu 20.04.                                    
+$echo "deb https://releases.jfrog.io/artifactory/artifactory-pro-debs focal main" | sudo tee -a /etc/apt/sources.list              
 $echo "deb https://releases.jfrog.io/artifactory/artifactory-debs focal main" | sudo tee -a /etc/apt/sources.list
 
-- Update packages
+- Update packages                                                 
 sudo apt update -y
 
-- Install JFrog Artifactory
+- Install JFrog Artifactory                                       
 $sudo apt install jfrog-artifactory-oss -y
 
-- Start and enable artifactory
-$sudo systemctl start artifactory
-$sudo systemctl enable artifactory
-$sudo systemctl status artifactory
+- Start and enable artifactory                                             
+$sudo systemctl start artifactory                               
+$sudo systemctl enable artifactory                              
+$sudo systemctl status artifactory                             
 
 ![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_status.png)
 
