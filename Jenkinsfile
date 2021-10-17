@@ -31,21 +31,21 @@ pipeline{
                 archiveArtifacts artifacts: 'artif_folder/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
             }
         }
-        stage ('Upload artifact to Artifactory') {
-            steps {
-              rtUpload (
-                  serverId: 'artifactory.dvrt.xyz',
-                  spec:
-                      """{
-                          "files": [
-                               "pattern": "artif_folder/artifacts.tar.gz",
-                               "target": "example-repo-local/artif_folder/artifacts.tar.gz"
-                            }
-                        ]
-                    }"""
-                )  
-            }
-        }
+//        stage ('Upload artifact to Artifactory') {
+//            steps {
+//              rtUpload (
+//                  serverId: 'artifactory.dvrt.xyz',
+//                  spec:
+//                      """{
+//                          "files": [
+//                               "pattern": "artif_folder/artifacts.tar.gz",
+//                               "target": "example-repo-local/artif_folder/artifacts.tar.gz"
+//                            }
+//                        ]
+//                    }"""
+//                )  
+//            }
+//        }
     }
 }
 
