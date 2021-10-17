@@ -3,8 +3,6 @@ node ('agent')
     stage ('Build NodeJS')
     {    
         env.NODEJS_HOME = tool 'nodejs16'
-		println(env.NODEJS_HOME)
-	sh 'PATH=${PATH}:/usr/bin/env/nodejs'
     }
     stage ('Checkout Repository')
     {
