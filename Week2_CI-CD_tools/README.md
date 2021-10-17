@@ -163,7 +163,9 @@ Manage Jenkins --> Global tool configuration --> add NodeJS installation(with na
 
 ![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/multibranch.png)
 
+- Scan repository
 
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/repository_log.png)
 
 
 

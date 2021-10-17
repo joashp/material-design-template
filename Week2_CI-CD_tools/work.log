@@ -1,0 +1,202 @@
+Branch indexing
+Connecting to https://api.github.com with no credentials, anonymous access
+Obtained Jenkinsfile from 3a28c6f8f48e65d7f21b15f9589e62a84fcb2d75
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on jenkins-agent in /home/jenkins/workspace/Assessment-2_dev
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning with configured refspecs honoured and without tags
+Cloning repository https://github.com/prytoliuk1988/material-design-template.git
+ > git init /home/jenkins/workspace/Assessment-2_dev # timeout=10
+Fetching upstream changes from https://github.com/prytoliuk1988/material-design-template.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.33.1'
+ > git fetch --no-tags --force --progress -- https://github.com/prytoliuk1988/material-design-template.git +refs/heads/dev:refs/remotes/origin/dev # timeout=10
+Avoid second fetch
+Checking out Revision 3a28c6f8f48e65d7f21b15f9589e62a84fcb2d75 (dev)
+Commit message: "add new screenshots"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Compressing)
+[Pipeline] parallel
+[Pipeline] { (Branch: CleanCSS)
+[Pipeline] { (Branch: UglifyJS)
+[Pipeline] stage
+[Pipeline] { (CleanCSS)
+[Pipeline] stage
+[Pipeline] { (UglifyJS)
+[Pipeline] tool
+[Pipeline] tool
+ > git config remote.origin.url https://github.com/prytoliuk1988/material-design-template.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/dev:refs/remotes/origin/dev # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3a28c6f8f48e65d7f21b15f9589e62a84fcb2d75 # timeout=10
+[Pipeline] envVarsForTool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] nodejs
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] nodejs
+[Pipeline] {
+[Pipeline] sh
+[Pipeline] {
+[Pipeline] sh
++ cleancss -o www/min/custom-min.css www/min/plugin-min.css www/css/font-awesome.min.css www/css/materialize.css www/css/materialize.min.css www/css/style.css
++ uglifyjs -o www/min/custom-min.js www/min/plugin-min.js www/js/init.js www/js/jquery-2.1.1.min.js www/js/materialize.js www/js/materialize.min.js www/js/modernizr.js
+[Pipeline] }
+[Pipeline] // nodejs
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] // nodejs
+[Pipeline] }
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // parallel
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Create and archive artifacts)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ mkdir archive
+[Pipeline] sh
++ tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=archive -zcvf archive/artifacts.tar.gz .
+./
+./README.md
+./www/
+./www/min/
+./www/min/plugin-min.js
+./www/min/plugin-min.css
+./www/min/custom-min.js
+./www/min/custom-min.css
+./www/index.html
+./www/font/
+./www/font/roboto/
+./www/font/roboto/Roboto-Bold.woff
+./www/font/roboto/Roboto-Medium.woff2
+./www/font/roboto/Roboto-Light.woff
+./www/font/roboto/Roboto-Light.ttf
+./www/font/roboto/Roboto-Light.woff2
+./www/font/roboto/Roboto-Medium.ttf
+./www/font/roboto/Roboto-Regular.ttf
+./www/font/roboto/Roboto-Medium.woff
+./www/font/roboto/Roboto-Thin.ttf
+./www/font/roboto/Roboto-Regular.woff
+./www/font/roboto/Roboto-Bold.ttf
+./www/font/roboto/Roboto-Thin.woff2
+./www/font/roboto/Roboto-Regular.woff2
+./www/font/roboto/Roboto-Thin.woff
+./www/font/roboto/Roboto-Bold.woff2
+./www/font/material-design-icons/
+./www/font/material-design-icons/LICENSE.txt
+./www/font/material-design-icons/Material-Design-Icons.woff
+./www/font/material-design-icons/Material-Design-Icons.eot
+./www/font/material-design-icons/Material-Design-Icons.ttf
+./www/font/material-design-icons/Material-Design-Icons.svg
+./www/font/material-design-icons/Material-Design-Icons.woff2
+./www/favicon.ico
+./www/img/
+./www/img/project1.jpg
+./www/img/project6.jpeg
+./www/img/project2.jpeg
+./www/img/project3.png
+./www/img/project4.jpg
+./www/img/avatar3.png
+./www/img/avatar2.png
+./www/img/avatar4.png
+./www/img/project5.png
+./www/img/parallax1.png
+./www/img/avatar1.png
+./www/contact.php
+./www/fonts/
+./www/fonts/fontawesome-webfont.ttf
+./www/fonts/fontawesome-webfont.eot
+./www/fonts/fontawesome-webfont.svg
+./www/fonts/FontAwesome.otf
+./www/fonts/fontawesome-webfont.woff
+./.gitignore
+./.gitattributes
+./result/
+./result/README.md
+./result/assessment.dvrt.xyz
+./result/crontab_log.png
+./result/git_graph_1.png
+./result/pre-commit
+./result/git_squash.png
+./result/webhook.sh
+./result/Merge_graph.png
+./result/rebase_graph.png
+./result/assessment.sh
+./result/pre-commit hook.png
+./Week2_CI-CD_tools/
+./Week2_CI-CD_tools/agent_settings_new.png
+./Week2_CI-CD_tools/README.md
+./Week2_CI-CD_tools/install_plugins.png
+./Week2_CI-CD_tools/artifactory_plugin.png
+./Week2_CI-CD_tools/add_ssh_key_from_main_node.png
+./Week2_CI-CD_tools/repository_log.png
+./Week2_CI-CD_tools/ubuntu_dist.png
+./Week2_CI-CD_tools/git_version_agent.png
+./Week2_CI-CD_tools/openjdk_version.png
+./Week2_CI-CD_tools/agent_log.png
+./Week2_CI-CD_tools/nodejs_installation.png
+./Week2_CI-CD_tools/add_new_user.png
+./Week2_CI-CD_tools/Recent_first_webhook.png
+./Week2_CI-CD_tools/java_version_agent.png
+./Week2_CI-CD_tools/list_of_nodes.png
+./Week2_CI-CD_tools/ssh_creds_agent.png
+./Week2_CI-CD_tools/node_plugin.png
+./Week2_CI-CD_tools/agent_settings.png
+./Week2_CI-CD_tools/java_verison_agent.png
+./Week2_CI-CD_tools/git_version_main.png
+./Week2_CI-CD_tools/agent_nodename.png
+./Week2_CI-CD_tools/First_webhook.png
+./Week2_CI-CD_tools/add_ssh_key_to_jenkins-main.png
+./Week2_CI-CD_tools/Jenkins_status.png
+./Week2_CI-CD_tools/add_ssh_key_to_agent.png
+./Week2_CI-CD_tools/initial_admin_passwd.png
+./Jenkinsfile
+[Pipeline] archiveArtifacts
+Archiving artifacts
+Recording fingerprints
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
