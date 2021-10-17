@@ -196,9 +196,9 @@ $sudo systemctl start artifactory
 $sudo systemctl enable artifactory
 $sudo systemctl status artifactory
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_status.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_status.png)
 
 - Config artifactory
 
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_start.png)
-![Image alt]((https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_url.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_start.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_url.pngartifactory_url.png)
