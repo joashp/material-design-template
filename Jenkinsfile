@@ -1,34 +1,34 @@
 pipeline
 {
-	agent
-	{
-		label 'agent'	
-	}
-	tools
-	{
-		nodejs 'nodejs16'
-	}
-	stages
-	{
+    agent
+    {
+	label 'agent'	
+    }
+    tools
+    {
+	nodejs 'nodejs16'
+    }
+    stages
+    {
         stage ('Checkout Repository')
         {
             steps
             {
                 checkout scm
             }
-		}
-		stage ('Compressing')
+	}
+	stage ('Compressing')
+	{
+	    parallel
+	    {
+		stage ('Compressing JS')
 		{
-			parallel
-			{
-				stage ('Compressing JS')
-				{
-					steps
-					{
-						sh 'uglifyjs ./www/js/* -c -o ./www/min/compressed-js.js'
-					}
-				}
-				stage ('Compressing CSS')
+		    steps
+		    {
+			sh 'uglifyjs ./www/js/* -c -o ./www/min/compressed-js.js'
+		    }
+		}
+		stage ('Compressing CSS')
                 {
                     steps
                     {
@@ -51,5 +51,5 @@ pipeline
                 archiveArtifacts artifacts: '*.tar', followSymlinks: false    
             }
         }
-	}
+    }
 }
