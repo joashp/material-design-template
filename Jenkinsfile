@@ -14,7 +14,7 @@ pipeline
                 {
                        steps
                        {
-                            	cheackout scm
+                            	checkout scm
                        }
 		}
 		stage ('Compressing')
