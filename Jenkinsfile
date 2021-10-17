@@ -39,7 +39,7 @@ pipeline{
                       """{
                           "files": [
                                "pattern": "artifct/artifacts.tar.gz",
-                               "target": "example-repo-local/"
+                               "target": "example-repo-local/artifacts.tar.gz"
                             
                             }
                         ]
