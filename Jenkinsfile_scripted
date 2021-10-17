@@ -3,7 +3,6 @@ node ('agent')
     stage ('Build NodeJS')
     {
         def nodejs_home = tool 'nodejs16'
-        sh "$nodejs_home/bin/npm --version"
     }
     stage ('Checkout Repository')
     {
