@@ -33,7 +33,7 @@ pipeline{
         }
         stage ('Add art to artifactory') {
             steps {
-              sh "curl -u jenkins:Q!w2e3r4T% -T  "http://artifactory.dvrt.xyz:8081/artifactory/artifactory-build-info/artifacts.tar.gz""  
+              sh "curl -u jenkins:Q!w2e3r4T% -T  'http://artifactory.dvrt.xyz:8081/artifactory/artifactory-build-info/artifacts.tar.gz'"  
             }
         }
         //curl -u<USERNAME>:<PASSWORD> -T <PATH_TO_FILE> "http://artifactory.dvrt.xyz:8081/artifactory/artifactory-build-info/<TARGET_FILE_PATH>"
