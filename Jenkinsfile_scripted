@@ -3,7 +3,7 @@ node ('agent')
     stage ('Build NodeJS')
     {    
         def nodejs_home = tool 'nodejs16'
-	def path = ${nodejs_home}/bin
+	def path = nodejs_home + "/bin"
     }
     stage ('Checkout Repository')
     {
