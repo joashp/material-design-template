@@ -10,12 +10,12 @@ pipeline
 	}
 	stages
 	{
-                stage ('Checkout Repository')
-                {
-                       steps
-                       {
-                            	checkout scm
-                       }
+        stage ('Checkout Repository')
+        {
+            steps
+            {
+                checkout scm
+            }
 		}
 		stage ('Compressing')
 		{
@@ -29,20 +29,27 @@ pipeline
 					}
 				}
 				stage ('Compressing CSS')
-                        	{
-                                	steps
-                                	{
-                                        	sh 'cleancss ./www/css/* -o ./www/min/compressed-css.css'
-                                	}
-                        	}
-			}
-		}
-	}
-	post
-	{
-		success
-		{
-			sh 'echo SUCCESS!!!!!!!!!!!!!!!!!'
-		}
+                {
+                    steps
+                    {
+                        sh 'cleancss ./www/css/* -o ./www/min/compressed-css.css'
+                    }
+                }
+            }
+        }
+        stage ('Archiving files into TAR')
+        {
+            steps
+            {
+                sh 'tar'    
+            }
+        }
+        stage ('Archiving artifacts to Jenkins')
+        {
+            steps
+            {
+                archiveArtifacts artifacts: '.tar', followSymlinks: false    
+            }
+        }
 	}
 }
