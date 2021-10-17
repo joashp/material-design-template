@@ -29,10 +29,17 @@ pipeline{
                 sh "mkdir arch_artf"
                 sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=arch_artf -zcvf arch_artf/artifacts.tar.gz ."
                 archiveArtifacts artifacts: 'arch_artf/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
-// transmit to post task                sh "rm -r archive"
             }
         }
+    post {
+		test {
+			withCredentials([usernamePassword(credentialsId: 'artifactory', usernameVariable: 'jenkins', passwordVariable: 'Q!w2e3r4T%')]) {
+				sh "curl -u${USERNAME}:${PASSWORD} -T arch_artf/artifacts.tar.gz \"http://artifactory.dvrt.xyz:8081/artifactory/assessment2/artifacts${env.BUILD_NUMBER}.tar.gz\""
+			}
+			echo "Success"
     }
+}
+}
 }
 
 
