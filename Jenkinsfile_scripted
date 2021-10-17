@@ -2,8 +2,8 @@ node ('agent')
 {
     stage ('Build NodeJS')
     {    
-        def nodejs_home = tool 'nodejs16'
-		println(nodejs_home)
+        env.NODEJS_HOME = tool 'nodejs16'
+		println(env.NODEJS_HOME)
     }
     stage ('Checkout Repository')
     {
