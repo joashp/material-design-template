@@ -33,14 +33,16 @@
 * **plugins – select plugins, add GitHub and Role-based authorization strategy:**
 
     <img width="1425" alt="Screenshot 2021-10-15 at 09 04 57" src="https://user-images.githubusercontent.com/26361903/137440157-75ba1472-63f6-4cad-8f92-03da73d6351a.png">
+_______________________________________
 
-    <img width="1436" alt="Screenshot 2021-10-15 at 09 06 30" src="https://user-images.githubusercontent.com/26361903/137440258-857ccf46-a3ac-4dea-9033-9a197cf7600a.png">
+   <img width="1436" alt="Screenshot 2021-10-15 at 09 06 30" src="https://user-images.githubusercontent.com/26361903/137440258-857ccf46-a3ac-4dea-9033-9a197cf7600a.png">
 
 * **add new user – jenkins-NAME (your fullname, jenkins-linustorvalds):**
 
     <img width="819" alt="Screenshot 2021-10-15 at 19 11 59" src="https://user-images.githubusercontent.com/26361903/137519752-8d8d3b4a-6848-4d67-bb8c-1739e4503953.png">
+________________________________________
 
-    <img width="1443" alt="Screenshot 2021-10-15 at 19 13 46" src="https://user-images.githubusercontent.com/26361903/137519780-0cdabd85-89e2-49ae-b2fc-d0f1a926840e.png">
+   <img width="1443" alt="Screenshot 2021-10-15 at 19 13 46" src="https://user-images.githubusercontent.com/26361903/137519780-0cdabd85-89e2-49ae-b2fc-d0f1a926840e.png">
 
 ## 2. Create Agent VM:
 
@@ -69,14 +71,16 @@
     *launching agent:*
     
     <img width="1408" alt="Screenshot 2021-10-15 at 20 44 47" src="https://user-images.githubusercontent.com/26361903/137531464-85b8b525-93cf-49e9-b54d-6dbfa3b681d7.png">
+_______________________________________
 
-    <img width="1444" alt="Screenshot 2021-10-15 at 20 48 27" src="https://user-images.githubusercontent.com/26361903/137531502-8284ff23-fde0-47a8-88d0-45e1fcf113ec.png">
+   <img width="1444" alt="Screenshot 2021-10-15 at 20 48 27" src="https://user-images.githubusercontent.com/26361903/137531502-8284ff23-fde0-47a8-88d0-45e1fcf113ec.png">
 
-    *checking agent with simple pipeline:*
+   *checking agent with simple pipeline:*
     
-    <img width="939" alt="Screenshot 2021-10-15 at 20 54 52" src="https://user-images.githubusercontent.com/26361903/137531664-fd7f7122-ba3a-4402-91ee-73c413991c46.png">
+   <img width="939" alt="Screenshot 2021-10-15 at 20 54 52" src="https://user-images.githubusercontent.com/26361903/137531664-fd7f7122-ba3a-4402-91ee-73c413991c46.png">
+___________________________________________
 
-    <img width="554" alt="Screenshot 2021-10-15 at 20 47 54" src="https://user-images.githubusercontent.com/26361903/137531687-2c7e3538-9610-4997-b68d-2e3e71df18a4.png">
+   <img width="554" alt="Screenshot 2021-10-15 at 20 47 54" src="https://user-images.githubusercontent.com/26361903/137531687-2c7e3538-9610-4997-b68d-2e3e71df18a4.png">
 
 ## 3. Configure tools – NodeJS:
 
@@ -89,5 +93,29 @@
     <img width="1428" alt="Screenshot 2021-10-15 at 21 21 57" src="https://user-images.githubusercontent.com/26361903/137534675-28a99adf-b742-49a0-819b-60bb1e9f02a9.png">
 
 ## 4. Create “Multibranch Pipeline” pipeline job (work inside Lab folder):
+
+* **folder name – your name in camel case (LinusTorvalds):** 
+
+* **Git: fork https://github.com/joashp/material-design-template repo:**
+
+    <img width="1425" alt="Screenshot 2021-10-17 at 15 54 24" src="https://user-images.githubusercontent.com/26361903/137628158-a1f9756d-49bd-45b1-9c42-6d912f50e389.png">
+___________________________
+
+   <img width="1777" alt="Screenshot 2021-10-17 at 15 50 12" src="https://user-images.githubusercontent.com/26361903/137628176-02d9505f-2d37-48f6-bb87-dbc15225ec7d.png">
+
+_____________________________
+
+   <img width="1265" alt="Screenshot 2021-10-17 at 15 50 32" src="https://user-images.githubusercontent.com/26361903/137628560-3383b461-56f2-4963-b320-b393dc0cace0.png">
+   
+* **Write Jenkinsfile which describes declarative pipeline:**
+
+    Jenkinsfile with all required steps is in the root directory of the repository.
+    
+    
+____________________________________
+
+
+### Build Logs of required job described in Jenkinsfile:
+
 
 
