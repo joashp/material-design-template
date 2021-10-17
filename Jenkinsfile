@@ -41,7 +41,7 @@ pipeline
         {
             steps
             {
-                sh 'tar'    
+                sh 'tar --exclude-vcs --exclude=www/js --exclude=www/css -cvf build.tar .'    
             }
         }
         stage ('Archiving artifacts to Jenkins')
