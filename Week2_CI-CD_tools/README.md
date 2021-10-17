@@ -84,7 +84,9 @@ $sudo apt-get install git -y
 ![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/git_version_main.png)
 
 
+#####Add DNS A-record to cloudflare(domain dvrt.xyz)#####        
 
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/cf_jenkins_main.png)
 
 
 **2-Create Jenkins-agent VM**
@@ -116,6 +118,11 @@ $sudo apt update -y && sudo apt upgrade -y
 $sudo apt-get install git -y
 
 ![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/git_version_agent.png)
+
+
+#####Add DNS A-record to cloudflare(domain dvrt.xyz)#####
+
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/cf_jenkins_agent.png)
 
 
 #####Connect agent to master node#####
@@ -224,6 +231,12 @@ $sudo systemctl enable artifactory
 $sudo systemctl status artifactory                             
 
 ![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/artifactory_status.png)
+
+
+#####Add DNS A-record to cloudflare(domain dvrt.xyz)#####
+
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/cf_artifactory.png)
+
 
 - Config artifactory
 
