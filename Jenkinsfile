@@ -16,23 +16,26 @@ pipeline
                        {
                             	cheackout scm
                        }
-                }		
-		parallel
+		}
+		stage ('Compressing')
 		{
-			stage ('Compressing JS')
+			parallel
 			{
-				steps
+				stage ('Compressing JS')
 				{
-					sh 'uglifyjs /www/js/*.js -c -o /www/min/compressed-js.js'
+					steps
+					{
+						sh 'uglifyjs /www/js/*.js -c -o /www/min/compressed-js.js'
+					}
 				}
+				stage ('Comprassing CSS')
+                        	{
+                                	steps
+                                	{
+                                        	sh 'cleancss /www/css/*.css -o /www/min/compressed-css.css'
+                                	}
+                        	}
 			}
-			stage ('Comprassing CSS')
-                        {
-                                steps
-                                {
-                                        sh 'cleancss /www/css/*.css -o /www/min/compressed-css.css'
-                                }
-                        }
 		}
 	}
 	post
