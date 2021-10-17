@@ -1,8 +1,9 @@
 node ('agent')	
 {
     stage ('Build NodeJS')
-    {
+    {    
         def nodejs_home = tool 'nodejs16'
+	sh 'echo $nodejs_home'
     }
     stage ('Checkout Repository')
     {
