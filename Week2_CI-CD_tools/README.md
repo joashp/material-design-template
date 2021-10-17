@@ -130,13 +130,8 @@ $sudo apt-get install git -y
 - In main-node configure user 'jenkins' with sudo permissions. Add ssh key for user 'jenkins' 
 - In agent-jenkins node add user jenkins with sudo permissions. Copy ssh-key from main-node
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/add_ssh_key_from_main_node.png)
-
-
 - In main page Manage Jenkins --> Manage Nodes and Cloud --> New Node
-- Add node with nodename 'agent-jenkins'
-
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/agent_nodename.png)
+- Add node with nodename 'jenkins-agent'
 
 - Configure agent setting.
 
