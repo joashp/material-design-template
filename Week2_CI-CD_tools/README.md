@@ -6,14 +6,14 @@
 Create jenkins-main VM:
 - Deploy VM in datacenter with current OS:
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/ubuntu_dist.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/ubuntu_dist.png)
 
 - Update and upgrade packages                              
 $sudo apt update -y && sudo apt upgrade -y
 
 - Create new user and add ssh-key to VM(Add key from other VM)
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/add_ssh_key_to_jenkins-main.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/add_ssh_key_to_jenkins-main.png)
 
 - Disable ssh auth for root user and disable password authentication:                                    
 $sudo nano /etc/ssh/sshd_config                                      
@@ -27,7 +27,7 @@ $sudo systemctl restart sshd
 $sudo apt-get install openjdk-8-jdk -y
 
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/openjdk_version.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/openjdk_version.png)
 
 #####Install Jenkins#####                                               
 - Add GPG keys Jenkins                                                  
@@ -45,7 +45,7 @@ $sudo apt install jenkins -y
 - Enable autostart Jenkins                                             
 $sudo systemctl enable jenkins     
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/Jenkins_status.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/Jenkins_status.png)
 
 - Change default Jenkins port                                
 $sudo nano /etc/default/jenkins
@@ -59,15 +59,15 @@ $sudo systemctl restart jenkins
 $sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 #Paste password for unlock Jenkins
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/initial_admin_passwd.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/initial_admin_passwd.png)
 
 - Add plugins: GitHub, Role-based authorization strategy
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/install_plugins.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/install_plugins.png)
 
 - Add new user
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/add_new_user.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/add_new_user.png)
 
 
 #####Install git#####
@@ -81,7 +81,7 @@ $sudo apt update -y && sudo apt upgrade -y
 - Install git                                      
 $sudo apt-get install git -y
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/git_version_main.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/git_version_main.png)
 
 
 
@@ -102,7 +102,7 @@ $sudo add-apt-repository ppa:openjdk-r/ppa -y
 - Install openjdk ver-8                       
 $sudo apt install openjdk-8-jdk -y
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/java_version_agent.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/java_version_agent.png)
 
 #####Install git#####
 
@@ -115,7 +115,7 @@ $sudo apt update -y && sudo apt upgrade -y
 - Install git                      
 $sudo apt-get install git -y
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/git_version_agent.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/git_version_agent.png)
 
 
 #####Connect agent to master node#####
@@ -123,25 +123,25 @@ $sudo apt-get install git -y
 - In main-node configure user 'jenkins' with sudo permissions. Add ssh key for user 'jenkins' 
 - In agent-jenkins node add user jenkins with sudo permissions. Copy ssh-key from main-node
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/add_ssh_key_from_main_node.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/add_ssh_key_from_main_node.png)
 
 
 - In main page Manage Jenkins --> Manage Nodes and Cloud --> New Node
 - Add node with nodename 'agent-jenkins'
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/agent_nodename.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/agent_nodename.png)
 
 - Configure agent setting.
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/agent_settings_new.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/agent_settings_new.png)
 
 - Add ssh-key 
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/ssh_creds_agent.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/ssh_creds_agent.png)
 
 - Jenkins agent is connected ti main node
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/list_of_nodes.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/list_of_nodes.png)
 
 
 
@@ -149,38 +149,38 @@ $sudo apt-get install git -y
 
 - Install NodeJS plugin 
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/node_plugin.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/node_plugin.png)
 
 - Add nodejs installation:
 Manage Jenkins --> Global tool configuration --> add NodeJS installation(with name 'nodejs', ver '16.11.1', Global npm packages to install 'clean-css-cli uglify-js'
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/nodejs_installation.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/nodejs_installation.png)
 
 
 
 **4. Create “Multibranch Pipeline” pipeline job**
 
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/multibranch.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/multibranch.png)
 
 - Scan repository
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/repository_log.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/repository_log.png)
 
 - Build 
 
 #Branch 'master'
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/build_and_create_artifact(master).png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/build_and_create_artifact(master).png)
 
 
 #Branch 'dev'
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/build_and_create_artifact(dev).png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/build_and_create_artifact(dev).png)
 
 #Pipeline graph
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pipeline_graph.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/pipeline_graph.png)
 
 
 
@@ -208,10 +208,10 @@ $sudo systemctl start artifactory
 $sudo systemctl enable artifactory                              
 $sudo systemctl status artifactory                             
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_status.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/artifactory_status.png)
 
 - Config artifactory
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_start.png)
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/artifactory_url.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/artifactory_start.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/artifactory_url.png)
 
