@@ -4,6 +4,7 @@ node ('agent')
     {    
         def nodejs_home = tool 'nodejs16'
 	def path = nodejs_home + "/bin"
+	println path
     }
     stage ('Checkout Repository')
     {
