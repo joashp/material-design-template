@@ -1,6 +1,9 @@
 pipeline
 {
-	agent('agent')
+	agent
+	{
+		label 'agent'	
+	}
 	tools
 	{
 		nodejs 'nodejs16'
