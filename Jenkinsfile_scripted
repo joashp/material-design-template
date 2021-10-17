@@ -1,1 +1,26 @@
-
+node ('agent')	
+{
+    stage ('Build NodeJS')
+    {
+        def nodejs_home = tool 'nodejs16'
+        sh "$nodejs_home"/bin/npm --version"
+    }
+    stage ('Checkout Repository')
+    {
+        checkout scm
+    }
+	stage ('Compressing JS and CSS')
+	{
+	    parallel_steps = [ "js" : {sh 'uglifyjs ./www/js/* -c -o ./www/min/compressed-js.js'}
+                           "css" : {sh 'cleancss ./www/css/* -o ./www/min/compressed-css.css'}]
+        parallel parallel_steps
+    }
+    stage ('Archiving files into TAR')
+    {
+        sh 'tar --exclude-vcs --exclude=www/js --exclude=www/css -cvf build.tar .'    
+    }
+    stage ('Archiving artifacts to Jenkins')
+    {
+        archiveArtifacts artifacts: '*.tar', followSymlinks: false    
+    }
+}
