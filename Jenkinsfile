@@ -48,7 +48,7 @@ pipeline
         {
             steps
             {
-                archiveArtifacts artifacts: '.tar', followSymlinks: false    
+                archiveArtifacts artifacts: '*.tar', followSymlinks: false    
             }
         }
 	}
