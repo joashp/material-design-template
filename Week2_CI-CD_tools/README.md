@@ -167,10 +167,12 @@ Manage Jenkins --> Global tool configuration --> add NodeJS installation(with na
 
 ![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/repository_log.png)
 
+- Build 
+
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/build_and_create_artifact(master).png)
 
 
-
-
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/build_and_create_artifact(dev).png)
 
 
 
