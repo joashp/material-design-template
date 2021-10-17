@@ -117,7 +117,7 @@ ____________________________________
 
 ### Build Logs of required job described in Jenkinsfile:
 
-    <img width="1661" alt="Screenshot 2021-10-17 at 17 37 37" src="https://user-images.githubusercontent.com/26361903/137632270-9b57bc7b-a8b6-46c1-936a-afebde6824b6.png">
+   <img width="1661" alt="Screenshot 2021-10-17 at 17 37 37" src="https://user-images.githubusercontent.com/26361903/137632270-9b57bc7b-a8b6-46c1-936a-afebde6824b6.png">
 
 ## 5. Setup the GitHub webhook to trigger the jobs:
 
