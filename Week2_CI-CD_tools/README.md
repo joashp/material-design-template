@@ -183,6 +183,21 @@ Manage Jenkins --> Global tool configuration --> add NodeJS installation(with na
 ![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/pipeline_graph.png)
 
 
+**5.  Setup the GitHub webhook to trigger the jobs**
+
+- Enable ‘GitHub hook trigger for Git SCM polling’
+
+#Add github webhook 
+
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/first_hook_settings.png)
+
+#Result(1)
+
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/first_hook_result(1).png)
+
+#Result(2)
+
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/first_hook_result(2).png)
 
 
 (*) **Spin up VM with installed Artifactory**
