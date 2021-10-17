@@ -121,15 +121,18 @@ ____________________________________
 
 ## 5. Setup the GitHub webhook to trigger the jobs:
 
-   **Setting up trigger in Jenkins and GitHub**
+   **Setting up trigger in Jenkins and GitHub:**
 
    <img width="1426" alt="Screenshot 2021-10-17 at 18 40 01" src="https://user-images.githubusercontent.com/26361903/137634676-96d56691-6795-4d9a-9d95-ab3a55f1a4b6.png">
    
    <img width="922" alt="Screenshot 2021-10-17 at 18 46 18" src="https://user-images.githubusercontent.com/26361903/137634764-47bba24b-edcd-4b2b-825f-4d90261f20ad.png">
 
-   **Checking connection via GitHub**
+   **Checking connection via GitHub:**
    
-   
+   <img width="942" alt="Screenshot 2021-10-17 at 18 47 52" src="https://user-images.githubusercontent.com/26361903/137634849-e39bf537-3125-4bfb-b52f-2b774f6f0009.png">
+
+   <img width="948" alt="Screenshot 2021-10-17 at 18 48 05" src="https://user-images.githubusercontent.com/26361903/137634855-eb8bc887-4a42-4ee2-95fb-1a3f6302090d.png">
+
 
 
    
