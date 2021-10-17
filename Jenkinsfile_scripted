@@ -11,8 +11,8 @@ node ('agent')
     }
 	stage ('Compressing JS and CSS')
 	{
-	    parallel_steps = [ "js" : {sh 'uglifyjs ./www/js/* -c -o ./www/min/compressed-js.js'}
-                           "css" : {sh 'cleancss ./www/css/* -o ./www/min/compressed-css.css'}]
+	    parallel_steps = [ "js" : {sh 'uglifyjs ./www/js/* -c -o ./www/min/compressed-js.js'},
+                            "css" : {sh 'cleancss ./www/css/* -o ./www/min/compressed-css.css'}]
         parallel parallel_steps
     }
     stage ('Archiving files into TAR')
