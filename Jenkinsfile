@@ -27,7 +27,7 @@ pipeline{
         stage ('Create and archive artifacts') {
             steps {
                 sh "mkdir new_arts"
-                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=new_build -zcvf new_arts/artifacts.tar.gz ."
+                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=new_arts -zcvf new_arts/artifacts.tar.gz ."
                 archiveArtifacts artifacts: 'new_arts/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
             }
         }
@@ -39,7 +39,7 @@ pipeline{
                             "files": [
                                 {
                                     "pattern": "new_arts/artifacts.tar.gz",
-                                    "target": "default-generic-local/artifact_${BUILD_ID}.tar.gz"
+                                    "target": "example-repo-local/artifact_${BUILD_ID}.tar.gz"
                                 }
                             ]
                         }"""
