@@ -163,7 +163,7 @@ Manage Jenkins --> Global tool configuration --> add NodeJS installation(with na
 **4. Create “Multibranch Pipeline” pipeline job**
 
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/multibranch.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/list_of_branches.png)
 
 - Scan repository
 
