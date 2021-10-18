@@ -182,7 +182,7 @@ Manage Jenkins --> Global tool configuration --> add NodeJS installation(with na
 
 #Pipeline graph
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/pipeline_graph.png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/pipeline_graph_new.png)
 
 #Artifactory settings
 
