@@ -178,11 +178,23 @@ Manage Jenkins --> Global tool configuration --> add NodeJS installation(with na
 
 #Branch 'dev'
 
-![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/build_and_create_artifact(dev).png)
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/build_and_upload.png)
 
 #Pipeline graph
 
 ![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/pipeline_graph.png)
+
+#Artifactory settings
+
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/artifactory_settings.png)
+
+#Artifactory result
+
+![Image alt](https://github.com/prytoliuk1988/material-design-template/blob/master/Week2_CI-CD_tools/pic/artifactory_result.png)
+
+
+
+
 
 
 **5.  Setup the GitHub webhook to trigger the jobs**
