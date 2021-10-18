@@ -27,7 +27,7 @@ pipeline{
         stage ('Create and archive artifacts') {
             steps {
                 sh "mkdir -p archive"
-                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=archive -zcvf artchive/artifacts.tar.gz ."
+                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=archive -zcvf archive/artifacts.tar.gz ."
                 archiveArtifacts artifacts: 'archive/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
             }
         }
