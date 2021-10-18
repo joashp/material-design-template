@@ -39,7 +39,7 @@ pipeline{
                             "files": [
                                 {
                                     "pattern": "archive/artifacts.tar.gz",
-                                    "target": "example-repo-local/artifact_${BUILD_ID}.tar.gz"
+                                    "target": "playtika"
                                 }
                             ]
                         }"""
