@@ -1,27 +1,28 @@
-Branch indexing
-Connecting to https://api.github.com with no credentials, anonymous access
-Obtained Jenkinsfile from 3a28c6f8f48e65d7f21b15f9589e62a84fcb2d75
+Pull request #23 closed
+09:47:37 Connecting to https://api.github.com with no credentials, anonymous access
+Obtained Jenkinsfile from b2f89a13190ededfe3bfad6c5ed363b749992442
 [Pipeline] Start of Pipeline
 [Pipeline] node
-Running on jenkins-agent in /home/jenkins/workspace/Assessment-2_dev
+Running on jenkins-agent in /home/jenkins/workspace/Artifacts_dev
 [Pipeline] {
 [Pipeline] stage
 [Pipeline] { (Declarative: Checkout SCM)
 [Pipeline] checkout
-The recommended git tool is: NONE
+The recommended git tool is: git
 No credentials specified
-Cloning the remote Git repository
-Cloning with configured refspecs honoured and without tags
-Cloning repository https://github.com/prytoliuk1988/material-design-template.git
- > git init /home/jenkins/workspace/Assessment-2_dev # timeout=10
+Fetching changes from the remote Git repository
+Fetching without tags
+Checking out Revision b2f89a13190ededfe3bfad6c5ed363b749992442 (dev)
+Commit message: "add new graph"
+ > git rev-parse --resolve-git-dir /home/jenkins/workspace/Artifacts_dev/.git # timeout=10
+ > git config remote.origin.url https://github.com/prytoliuk1988/material-design-template.git # timeout=10
 Fetching upstream changes from https://github.com/prytoliuk1988/material-design-template.git
  > git --version # timeout=10
  > git --version # 'git version 2.33.1'
  > git fetch --no-tags --force --progress -- https://github.com/prytoliuk1988/material-design-template.git +refs/heads/dev:refs/remotes/origin/dev # timeout=10
-Avoid second fetch
-Checking out Revision 3a28c6f8f48e65d7f21b15f9589e62a84fcb2d75 (dev)
-Commit message: "add new screenshots"
-First time build. Skipping changelog.
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b2f89a13190ededfe3bfad6c5ed363b749992442 # timeout=10
+ > git rev-list --no-walk ea206ff47dbbd4a7ccb408ff1a2ff34a05453a22 # timeout=10
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] withEnv
@@ -45,10 +46,6 @@ First time build. Skipping changelog.
 [Pipeline] { (UglifyJS)
 [Pipeline] tool
 [Pipeline] tool
- > git config remote.origin.url https://github.com/prytoliuk1988/material-design-template.git # timeout=10
- > git config --add remote.origin.fetch +refs/heads/dev:refs/remotes/origin/dev # timeout=10
- > git config core.sparsecheckout # timeout=10
- > git checkout -f 3a28c6f8f48e65d7f21b15f9589e62a84fcb2d75 # timeout=10
 [Pipeline] envVarsForTool
 [Pipeline] envVarsForTool
 [Pipeline] withEnv
@@ -87,7 +84,7 @@ First time build. Skipping changelog.
 [Pipeline] withEnv
 [Pipeline] {
 [Pipeline] sh
-+ mkdir archive
++ mkdir -p archive
 [Pipeline] sh
 + tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=archive -zcvf archive/artifacts.tar.gz .
 ./
@@ -158,36 +155,71 @@ First time build. Skipping changelog.
 ./result/assessment.sh
 ./result/pre-commit hook.png
 ./Week2_CI-CD_tools/
-./Week2_CI-CD_tools/agent_settings_new.png
 ./Week2_CI-CD_tools/README.md
-./Week2_CI-CD_tools/install_plugins.png
-./Week2_CI-CD_tools/artifactory_plugin.png
-./Week2_CI-CD_tools/add_ssh_key_from_main_node.png
-./Week2_CI-CD_tools/repository_log.png
-./Week2_CI-CD_tools/ubuntu_dist.png
-./Week2_CI-CD_tools/git_version_agent.png
-./Week2_CI-CD_tools/openjdk_version.png
-./Week2_CI-CD_tools/agent_log.png
-./Week2_CI-CD_tools/nodejs_installation.png
-./Week2_CI-CD_tools/add_new_user.png
-./Week2_CI-CD_tools/Recent_first_webhook.png
-./Week2_CI-CD_tools/java_version_agent.png
-./Week2_CI-CD_tools/list_of_nodes.png
-./Week2_CI-CD_tools/ssh_creds_agent.png
-./Week2_CI-CD_tools/node_plugin.png
-./Week2_CI-CD_tools/agent_settings.png
-./Week2_CI-CD_tools/java_verison_agent.png
-./Week2_CI-CD_tools/git_version_main.png
-./Week2_CI-CD_tools/agent_nodename.png
-./Week2_CI-CD_tools/First_webhook.png
-./Week2_CI-CD_tools/add_ssh_key_to_jenkins-main.png
-./Week2_CI-CD_tools/Jenkins_status.png
-./Week2_CI-CD_tools/add_ssh_key_to_agent.png
-./Week2_CI-CD_tools/initial_admin_passwd.png
+./Week2_CI-CD_tools/pic/
+./Week2_CI-CD_tools/pic/install_poll_SCM.png
+./Week2_CI-CD_tools/pic/artifactory_url.png
+./Week2_CI-CD_tools/pic/pipeline_graph.png
+./Week2_CI-CD_tools/pic/agent_settings_new.png
+./Week2_CI-CD_tools/pic/install_plugins.png
+./Week2_CI-CD_tools/pic/first_hook_result(2).png
+./Week2_CI-CD_tools/pic/artifactory_plugin.png
+./Week2_CI-CD_tools/pic/add_ssh_key_from_main_node.png
+./Week2_CI-CD_tools/pic/repository_log.png
+./Week2_CI-CD_tools/pic/build_and_create_artifact(dev).png
+./Week2_CI-CD_tools/pic/cf_jenkins_main.png
+./Week2_CI-CD_tools/pic/ubuntu_dist.png
+./Week2_CI-CD_tools/pic/artifactory_result.png
+./Week2_CI-CD_tools/pic/git_version_agent.png
+./Week2_CI-CD_tools/pic/build_and_upload.png
+./Week2_CI-CD_tools/pic/openjdk_version.png
+./Week2_CI-CD_tools/pic/cf_jenkins_agent.png
+./Week2_CI-CD_tools/pic/agent_log.png
+./Week2_CI-CD_tools/pic/nodejs_installation.png
+./Week2_CI-CD_tools/pic/Multibranch.png
+./Week2_CI-CD_tools/pic/add_new_user.png
+./Week2_CI-CD_tools/pic/install_hook_plugins.png
+./Week2_CI-CD_tools/pic/Recent_first_webhook.png
+./Week2_CI-CD_tools/pic/java_version_agent.png
+./Week2_CI-CD_tools/pic/first_hook_settings.png
+./Week2_CI-CD_tools/pic/artifactory_start.png
+./Week2_CI-CD_tools/pic/list_of_nodes.png
+./Week2_CI-CD_tools/pic/first_hook_result(1).png
+./Week2_CI-CD_tools/pic/ssh_creds_agent.png
+./Week2_CI-CD_tools/pic/node_plugin.png
+./Week2_CI-CD_tools/pic/agent_settings.png
+./Week2_CI-CD_tools/pic/pipeline_graph_new.png
+./Week2_CI-CD_tools/pic/build_and_create_artifact(master).png
+./Week2_CI-CD_tools/pic/artifactory_status.png
+./Week2_CI-CD_tools/pic/java_verison_agent.png
+./Week2_CI-CD_tools/pic/build_and_upload(master).png
+./Week2_CI-CD_tools/pic/git_version_main.png
+./Week2_CI-CD_tools/pic/agent_nodename.png
+./Week2_CI-CD_tools/pic/First_webhook.png
+./Week2_CI-CD_tools/pic/list_of_branches.png
+./Week2_CI-CD_tools/pic/multibranch.png
+./Week2_CI-CD_tools/pic/add_ssh_key_to_jenkins-main.png
+./Week2_CI-CD_tools/pic/Jenkins_status.png
+./Week2_CI-CD_tools/pic/cf_artifactory.png
+./Week2_CI-CD_tools/pic/add_ssh_key_to_agent.png
+./Week2_CI-CD_tools/pic/initial_admin_passwd.png
+./Week2_CI-CD_tools/pic/artifactory_settings.png
+./Week2_CI-CD_tools/work.log
 ./Jenkinsfile
 [Pipeline] archiveArtifacts
 Archiving artifacts
 Recording fingerprints
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Upload to artifactory)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] rtUpload
 [Pipeline] }
 [Pipeline] // withEnv
 [Pipeline] }
