@@ -10,13 +10,13 @@ pipeline
     }
     stages
     {
-        stage ('Checkout Repository')
-        {
-            steps
-            {
-                checkout scm
-            }
-	}
+//         stage ('Checkout Repository')
+//         {
+//             steps
+//             {
+//                 checkout scm
+//             }
+// 	}
 	stage ('Compressing')
 	{
 	    parallel
