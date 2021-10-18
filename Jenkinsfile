@@ -26,9 +26,24 @@ pipeline{
         }
         stage ('Create and archive artifacts') {
             steps {
-                sh "mkdir new_artifacts"
-                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=new_artifacts -zcvf new_artifacts/artifacts.tar.gz ."
-                archiveArtifacts artifacts: 'new_artifacts/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
+                sh "mkdir new_build"
+                sh "tar --exclude=www/css --exclude=www/js --exclude=.git --exclude=new_build -zcvf new_build/artifacts.tar.gz ."
+                archiveArtifacts artifacts: 'new_build/artifacts.tar.gz', fingerprint: true, onlyIfSuccessful: true
+            }
+        }
+        stage('Upload to artifactory') {
+            steps {
+                rtUpload (
+                    serverId: "artifactory.dvrt.xyz", spec:
+                        """{
+                            "files": [
+                                {
+                                    "pattern": "new_build/artifacts.tar.gz",
+                                    "target": "default-generic-local/artifact_${BUILD_ID}.tar.gz"
+                                }
+                            ]
+                        }"""
+                )
             }
         }
     }
